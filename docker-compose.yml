@@ -72,7 +72,7 @@ services:
       - IPC_LOCK
     command: vault server -config=/vault/config/vault.json
 
-    
+
 volumes:
   mongo:
   influxdbv2:
