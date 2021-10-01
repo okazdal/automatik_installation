@@ -6,7 +6,7 @@ AutomaTik is an automation system for MikroTik devices with simplicity and secur
 ## Requirements
  - [Docker](https://docs.docker.com/get-docker/)
  - [Docker Compose](https://docs.docker.com/compose/)
- - Python 3.6+
+ - Python 3.9+
 
 
 ## Installation
@@ -16,4 +16,24 @@ AutomaTik is an automation system for MikroTik devices with simplicity and secur
 git clone https://github.com/okazdal/automatik_installation.git
 ```
 
+## Create .env file
+```
+pip install poetry
+cd automatik_installation
+poetry shell
+poetry install
+python create_dotenv.py
+```
 
+## Start containers
+```
+docker-compose up -d
+```
+
+## InfluxDB Configuration
+
+
+## Minio Configuration
+
+
+## Vault Configuration
