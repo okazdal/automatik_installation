@@ -30,10 +30,9 @@ python create_dotenv.py
 docker-compose up -d
 ```
 
-## InfluxDB Configuration
+## [InfluxDB Configuration](docs/influx_config.md)
 
 
-## Minio Configuration
+## [Minio Configuration](doc/minio_config.md)
 
 
-## Vault Configuration
