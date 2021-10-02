@@ -33,6 +33,6 @@ docker-compose up -d
 ## [InfluxDB Configuration](docs/influx_config.md)
 
 
-## [Minio Configuration](doc/minio_config.md)
+## [Minio Configuration](docs/minio_config.md)
 
 

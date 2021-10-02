@@ -14,3 +14,6 @@
 ![Minio setup 1](images/setup_13.png)
 
 - You will use access key and secret key information on the next step.
+
+## Next Step
+[Continue Setup](../README.md)

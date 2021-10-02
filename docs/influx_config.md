@@ -31,4 +31,7 @@
 
 ![InfluxDB setup 4](images/setup_10.png)
 
+## Next Step
+
+[Configure Minio](minio_config.md)
 
