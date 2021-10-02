@@ -35,4 +35,12 @@ docker-compose up -d
 
 ## [Minio Configuration](docs/minio_config.md)
 
+## Run Setup Script
+```
+python setup.py
+```
 
+## Restart Containers
+```
+docker-compose restart
+```
