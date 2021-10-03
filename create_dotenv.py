@@ -8,7 +8,7 @@ def main():
     console = Console(color_system="auto")
     # with console.status("Working...", spinner="dots"):
     if os.path.exists(".env"):
-        console.print("[red].env file already exists. Exiting...")
+        console.print("[red].env file already exists. Please delete it. Exiting...")
         sys.exit()
 
     mongo_user = console.input("[green]MongoDB Username: ")
