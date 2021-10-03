@@ -2,6 +2,8 @@
 
 AutomaTik is an automation system for MikroTik devices with simplicity and security in mind. Winbox is the main tool for MikroTik management, but it can be overwhelming for beginners. AutomaTik will help you configure your MikroTik device easily.
 
+[Check out AutomaTik web site for more information](https://automatik.cloud)
+
 
 ## Requirements
  - [Docker](https://docs.docker.com/get-docker/)
