@@ -61,9 +61,9 @@ def main():
     
     console.print('[green]Vault initialized...')
     # UNSEAL
-    unseal()
+    unseal(vault_keys)
     # CREATE POLICY
-    create_policy()
+    create_policy(vault_root_token)
     # CREATE TOKEN
     vault_token = create_token(vault_root_token)
 
@@ -80,14 +80,14 @@ class Settings(BaseSettings):
     secret: str  # autmatically taken from environement variable
     token_url: str = "/api/auth/login"
 
-    mongo_host: str = "mongodb"
+    mongo_host: str = "mongo"
     mongo_user: str = "{mongo_user}"
     mongo_pass: str = "{mongo_pass}"
     mongo_db: str = "automatik"
 
     @property
     def mongo_dsn(self):
-        return f"mongodb://{mongo_user}:{mongo_pass}@mongodb:27017/automatik?authSource=admin"
+        return f"mongodb://{mongo_user}:{mongo_pass}@mongo:27017/automatik?authSource=admin"
 
 
 DEFAULT_SETTINGS = Settings(_env_file=".env")
@@ -95,14 +95,14 @@ DEFAULT_SETTINGS = Settings(_env_file=".env")
 # MONGO CONFIG
 # import os
 
-DB_URI = 'mongodb://{mongo_user}:{mongo_pass}@mongodb:27017/automatik?authSource=admin'
+DB_URI = 'mongodb://{mongo_user}:{mongo_pass}@mongo:27017/automatik?authSource=admin'
 
 # VAULT CONFIG
 VAULT_URL = 'http://vault:8200'
 VAULT_TOKEN = '{vault_token}'
 VAULT_KEYNAME = 'automatik'
 VAULT_KEYS = {vault_keys}
-VAULT_ROOT_TOKEN = {vault_root_token}
+VAULT_ROOT_TOKEN = '{vault_root_token}'
 
 # INFLUXDB
 INFLUX_TOKEN = '{influx_token}'
@@ -110,11 +110,15 @@ INFLUX_TOKEN = '{influx_token}'
 
 
 # PRODUCT DB
-PRODUCT_DB_URI = 'mongodb://{mongo_user}:{mongo_pass}@mongodb:27017/tik_db?authSource=admin'
+PRODUCT_DB_URI = 'mongodb://{mongo_user}:{mongo_pass}@mongo:27017/tik_db?authSource=admin'
 
 # MINIO
 MINIO_KEY_ID = '{minio_username}'
 MINIO_ACCESS_KEY = '{minio_password}'
+
+SCANNER_URI = ''
+SCANNER_USERNAME = ''
+SCANNER_PASSWORD = ''
 '''
 
     with open("config/config.py", "w") as f:

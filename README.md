@@ -27,7 +27,7 @@ python create_dotenv.py
 
 ## Start containers
 ```
-docker-compose up -d
+docker-compose up -d mongo redis influxdb minio vault
 ```
 
 ## [InfluxDB Configuration](docs/influx_config.md)
@@ -40,7 +40,7 @@ docker-compose up -d
 python setup.py
 ```
 
-## Restart Containers
+## Start Containers
 ```
-docker-compose restart
+docker-compose up -d fastapi sio worker beat frontend
 ```

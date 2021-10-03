@@ -18,6 +18,8 @@ def main():
     minio_pass = console.input("[green]Minio Root Password: ")
 
     with open(".env", "w") as f:
+        f.write(f"SECRET={os.urandom(24).hex()}")
+        f.write("\n")
         f.write(f"MONGO_USERNAME={mongo_user}\n")
         f.write(f"MONGO_PASSWORD={mongo_pass}\n")
         f.write("\n")

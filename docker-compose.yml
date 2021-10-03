@@ -72,7 +72,59 @@ services:
       - IPC_LOCK
     command: vault server -config=/vault/config/vault.json
 
+  fastapi:
+      image: okazdal/automatik-backend:0.1
+      restart: always
+      expose:
+        - "8000"
+      ports:
+        - 8000:8000
+      volumes:
+        - ./config/config.py:/usr/src/app/config.py
+        - ./.env:/usr/src/app/.env
+      command: 
+        "python app_starter.py"
+
+  sio:
+    image: okazdal/automatik-backend:0.1
+    restart: always
+    expose:
+      - "8000"
+    ports:
+      - 8001:8000
+    volumes:
+      - ./config/config.py:/usr/src/app/config.py
+      - ./.env:/usr/src/app/.env
+    command:
+      "python sio_tornado_starter.py"
+
+  worker:
+    image: okazdal/automatik-backend:0.1
+    restart: always
+    command:
+      "celery -A task_queue worker -l info -E"
+    volumes:
+      - ./config/config.py:/usr/src/app/config.py
+      - backups:/usr/src/app/backups
+      - ./.env:/usr/src/app/.env
+
+  beat:
+    image: okazdal/automatik-backend:0.1
+    restart: always
+    volumes:
+      - ./config/config.py:/usr/src/app/config.py
+      - ./.env:/usr/src/app/.env
+    command:
+      "celery -A task_queue beat -l info"
+
+  frontend:
+    image: okazdal/automatik-frontend:0.1
+    restart: always
+    ports:
+      - 80:80
+     
 
 volumes:
   mongo:
   influxdbv2:
+  backups:
