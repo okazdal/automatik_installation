@@ -44,3 +44,16 @@ python setup.py
 ```
 docker-compose up -d fastapi sio worker beat frontend
 ```
+
+## Web interface
+
+Create an entry in /etc/hosts
+
+```
+127.0.0.1	my.automatik.cloud
+```
+
+Open page [My AutomaTik Login](http://my.automatik.cloud)
+
+![Login Page](docs/images/login.png)
+
