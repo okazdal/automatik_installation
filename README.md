@@ -47,11 +47,13 @@ docker-compose up -d fastapi sio worker beat frontend
 
 ## Web interface
 
-Create an entry in /etc/hosts
+Create an entry in /etc/hosts on your computer.
 
 ```
 127.0.0.1	my.automatik.cloud
 ```
+
+Add 127.0.0.1 if AutomaTik is installed on same device. If you have installed AutomaTik on a server, instead of 127.0.0.1 use server IP address.
 
 Open page [My AutomaTik Login](http://my.automatik.cloud)
 
