@@ -1,6 +1,6 @@
 # Minio Configuration
 
-- Open page http://localhost:9001
+- [Open page](http://localhost:9001)
 
 ![Minio setup 1](images/setup_11.png)
 
@@ -9,11 +9,12 @@
 
 ![Minio setup 1](images/setup_12.png)
 
-- Create an access key, secret key and assign read write policy 
+- Create an access key, secret key and assign read write policy
 
 ![Minio setup 1](images/setup_13.png)
 
 - You will use access key and secret key information on the next step.
 
 ## Next Step
+
 [Continue Setup](../README.md)

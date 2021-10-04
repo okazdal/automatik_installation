@@ -1,6 +1,6 @@
 # InfluxDB Configuration
 
-- Open page http://localhost:8086
+- [Open page](http://localhost:8086)
   
 ![InfluxDb setup 1](images/setup_1.png)
 
@@ -35,4 +35,3 @@
 ## Next Step
 
 [Configure Minio](minio_config.md)
-
