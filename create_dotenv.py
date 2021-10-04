@@ -26,6 +26,7 @@ def main():
         f.write(f"MINIO_USERNAME={minio_user}\n")
         f.write(f"MINIO_PASSWORD={minio_pass}\n")
         f.write("\n")
+
         
 
 if __name__ == "__main__":

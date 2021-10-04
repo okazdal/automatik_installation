@@ -57,9 +57,7 @@ services:
     image: vault:latest
     volumes:
       - ./vault/config:/vault/config
-      - ./vault/policies:/vault/policies
-      - ./vault/data:/vault/data
-      - ./vault/db:/mnt/vault/data
+      - vault:/vault
     ports:
       - 8200:8200
     expose:
@@ -128,3 +126,4 @@ volumes:
   mongo:
   influxdbv2:
   backups:
+  vault:

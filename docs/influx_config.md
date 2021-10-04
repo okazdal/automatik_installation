@@ -5,6 +5,7 @@
 ![InfluxDb setup 1](images/setup_1.png)
 
 - Create initial username, password, organization name and bucket name
+- Organization name must be "automatik"
 
 ![InfluxDB setup 2](images/setup_2.png)
 ![InfluxDB setup 3](images/setup_3.png)

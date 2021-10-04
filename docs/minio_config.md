@@ -5,7 +5,7 @@
 ![Minio setup 1](images/setup_11.png)
 
 - Login using username / password you selected before.
-- Create a bucket. Optionally you can set advanced settings. This bucket will be used for backup files
+- Create a bucket named "automatik". Optionally you can set advanced settings. This bucket will be used for backup files
 
 ![Minio setup 1](images/setup_12.png)
 

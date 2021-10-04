@@ -68,8 +68,8 @@ def main():
     vault_token = create_token(vault_root_token)
 
     influx_token = console.input("[green]InfluxDB Token: ")
-    minio_username = console.input("[green]Minio Username: ")
-    minio_password = console.input("[green]Minio Password: ")
+    minio_username = console.input("[green]Minio Access Key: ")
+    minio_password = console.input("[green]Minio Secret Key: ")
     
 
     CONFIG = f'''
