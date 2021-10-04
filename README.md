@@ -61,3 +61,11 @@ Open page [My AutomaTik Login](http://my.automatik.cloud)
 
 ![Login Page](docs/images/login.png)
 
+## Scaling
+Depending on the number of managed routers, you may want to have more worker containers.
+
+To get 2 worker containers, you can use following command:
+
+```
+docker-compose scale worker=2
+```
