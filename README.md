@@ -27,6 +27,8 @@ pip install poetry
 cd automatik_installation
 poetry shell
 poetry install
+mkdir config
+touch config/config.py
 python create_dotenv.py
 ```
 
