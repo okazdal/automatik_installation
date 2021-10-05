@@ -48,6 +48,13 @@ def create_token(root_token):
     token = client.auth.token.create(policies=['automatik'])
     return token['auth']['client_token']
 
+def create_key(root_token):
+    client = hvac.Client(url='http://localhost:8200')
+    client.token = root_token
+    client.sys.enable_secrets_engine('transit')
+    client.secrets.transit.create_key(name='automatik')
+
+
 def main():
     console = Console(color_system="auto")
     # with console.status("Working...", spinner="dots"):
@@ -66,6 +73,9 @@ def main():
     create_policy(vault_root_token)
     # CREATE TOKEN
     vault_token = create_token(vault_root_token)
+    # CREATE KEY
+    create_key(vault_root_token)
+
 
     influx_token = console.input("[green]InfluxDB Token: ")
     minio_username = console.input("[green]Minio Access Key: ")
